@@ -15,7 +15,7 @@ end
 def array_42(array)
     array.include?(42)
 end
-system ("cls")
+
 def magic_array(h)
     p h.flatten.map!{|e| (e.to_i*2)}.sort.uniq.delete_if{|e| e%3==0}    
     

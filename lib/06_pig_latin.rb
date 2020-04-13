@@ -20,6 +20,9 @@ def translate(str)
 p l.join(",")
 end
 
+def translate
+end
+
 =begin
 def translate
     if begin vowels
