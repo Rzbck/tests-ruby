@@ -17,7 +17,6 @@ def array_42(array)
 end
 
 def magic_array(h)
-    p h.flatten.map!{|e| (e.to_i*2)}.sort.uniq.delete_if{|e| e%3==0}    
-    
+    p h.flatten.map!{|e| (e.to_i*2)}.sort.uniq.delete_if{|e| e%3==0}
 end
 #magic_array([1, [2, 3], 4, 5, 6, 23, 31, [1, 2, 3]])
