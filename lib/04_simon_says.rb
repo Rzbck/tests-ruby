@@ -20,10 +20,15 @@ def first_word(str)
 end
 
 def titleize(str)
-   p str.split.map(&:capitalize).join(' ')
+   #p str.split.map(&:capitalize).join(' ')
+   #str.split.map{|i| i=i.capitalize}.join(" ").gsub(' The',' the').gsub("And","and")
+   p str.split.each{|i| i=i.capitalize! if i.length>3}.join(" ").sub(/^[a-z]/,&:capitalize)
 end
-
+=begin
 titleize("jaws")
 titleize("david copperfield")
 titleize("war and peace")
 titleize("the bridge over the river kwai")
+titleize("rain over the river kwai")
+=end
+
