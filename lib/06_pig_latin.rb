@@ -1,16 +1,22 @@
 system ("cls")
 def translate(str)
-    l = str.split(" ")
-
-    for i in 0..l.length {
-
-    if l[i].start_with?("a","e","i","o","u")
-        p l+"ay"
-    end
+    str = str.split(" ")
+    vowel = "a","e","i","o","u"
+    l = []
+    str.length.times { |i|
+        if str[i][0] == "a"||"e"||"i"||"o"||"u"
+            l << str[i]+"ay"
+        else 
+            l << str[i].reverse+"ay"
+        end
+        if str[0] == 5
+            l << str[i].reverse
+        end
 }
+p l.join(",").sub(',',' ')
 end
 
-end
+
 translate("apple")
 translate("banana")
 translate("cherry")
